@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Home = () => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>寻访初心・红色研学之路</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
