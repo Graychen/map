@@ -22,7 +22,7 @@ const Map = () => (
         align-items: center;
         width: 100%;
         height: 100%;
-        background: url(/images/map.png);
+        background: url(/images/map.png) center;
         background-size: 200%;
         background-attachment: scroll;
       }
