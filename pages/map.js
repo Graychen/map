@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import ReactDOM from 'react-dom';
+import { Map, APILoader } from '@uiw/react-baidu-map';
 
-const Map = () => (
+const Maps = () => (
   <div className="container">
     <Head>
       <title>温州市党员红色地图</title>
@@ -8,6 +10,9 @@ const Map = () => (
     </Head>
 
     <main>
+        <APILoader akay="GTrnXa5hwXGwgQnTBG28SHBubErMKm3f">
+            <Map center="温州"/>
+        </APILoader>
     </main>
     <footer>
     </footer>
@@ -22,7 +27,6 @@ const Map = () => (
         align-items: center;
         width: 100%;
         height: 100%;
-        background: url(/images/map.png) center;
         background-size: 200%;
         background-attachment: scroll;
       }
@@ -55,4 +59,4 @@ const Map = () => (
   </div>
 )
 
-export default Map
+export default Maps
