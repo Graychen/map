@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const Home = () => (
+const Home = (props) => (
   <div className="container">
     <Head>
       <title>详情</title>
@@ -10,16 +10,16 @@ const Home = () => (
 
     <main>
       <h1>
-      “瓯江红”南白象街道党群服务中心
+      {props.show.name}
       </h1>
       <h2>
-      地址：
+      地址：{props.show.address}
       </h2>
       <h2>
-      联系电话：
+      联系电话：{props.show.phone}
       </h2>
       <p>
-      “瓯江红”南白象街道党群服务中心距街道办事处约100米，总面积约4000平方米，是集党务政务服务、基层治理、全科网格、四个平台等功能于一体的党建综合体。中心以“党建+基层治理”为核心，深化“红色领航”基层治理，实施“红领善治”工程，用专业化、社会化和项目化的运营模式，搭建党建资源共建共享互补共用平台，把各项工作融入到服务基层治理和群众生产生活的需求中去,打造向党员、群众开放的共享空间。
+      {props.show.content}
       </p>
     </main>
 
@@ -63,5 +63,15 @@ const Home = () => (
     `}</style>
   </div>
 )
+
+Home.getInitialProps = async function (context) {
+    const { id } = context.query
+    const res = await fetch(`http://map-graychen.vercel.app/api/detail/${id}`)
+    const show = await res.json()
+  
+    console.log(`Fetched show: ${show.name}`)
+  
+    return { show }
+  }
 
 export default Home
