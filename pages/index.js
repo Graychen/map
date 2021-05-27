@@ -10,7 +10,7 @@ const Home = () => (
 
     <main>
       <button className="into">
-       <Link href="/map"><a>立即进入</a></Link>
+       <Link href="http://test-phihw-1302796481.tcloudbaseapp.com/"><a>立即进入</a></Link>
       </button>
 
     </main>
@@ -58,7 +58,6 @@ const Home = () => (
       .into a{
         color: #8c232a;
       }
-
 
     `}</style>
 

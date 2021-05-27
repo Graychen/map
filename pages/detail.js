@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Image from 'next/image'
+
 
 const Home = (props) => (
   <div className="container">
@@ -7,8 +8,13 @@ const Home = (props) => (
       <title>详情</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <main>
+      <Image
+        src="/images/1.jpg"
+        alt="Picture of the author"
+        width={500}
+        height={420}
+      />
       <h1>
       {props.show.name}
       </h1>
@@ -27,13 +33,14 @@ const Home = (props) => (
     <style jsx>{`
       .container {
         min-height: 100vh;
-        padding: 0 0.5rem;
+        padding: 0rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        background:url(http://o.cztvcloud.com/231/8594158/vr/static/img/detail-bg.d82fb0f6.png) no-repeat top
       }
 
       main {
@@ -41,6 +48,22 @@ const Home = (props) => (
         flex-direction: column;
         justify-content: start;
         align-items: start;
+      }
+
+      h1 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin:0em;
       }
     `}</style>
 
@@ -66,7 +89,8 @@ const Home = (props) => (
 
 Home.getInitialProps = async function (context) {
     const { id } = context.query
-    const res = await fetch(`http://map-graychen.vercel.app/api/detail/${id}`)
+    //const res = await fetch(`http://map-graychen.vercel.app/api/detail/${id}`)
+    const res = await fetch(`http://localhost:3000/api/detail/${id}`)
     const show = await res.json()
   
     console.log(`Fetched show: ${show.name}`)

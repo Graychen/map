@@ -25,6 +25,7 @@ const Home = () => (
         align-items: center;
         width: 100%;
         height: 100%;
+        background:url(http://o.cztvcloud.com/231/8594158/vr/static/img/detail-bg.d82fb0f6.png) no-repeat top
       }
 
       main {
@@ -33,6 +34,29 @@ const Home = () => (
         justify-content: start;
         align-items: start;
       }
+
+      .into{
+        position: absolute;
+        width: 50%;
+        line-height: 2rem;
+        border-radius: 0.2rem;
+        left: 0;
+        right: 0;
+        bottom: 11%;
+        background: #FFF7BD;
+        text-align: center;
+        color: white;
+        font-size: 0.8rem;
+        margin: auto;
+        font-color: #FFF7BD;
+        font-weight: 600;
+        border: #FFF7BD;
+      }
+
+      a{
+        color: #EF4C07 ;
+      }
+
     `}</style>
 
     <style jsx global>{`
