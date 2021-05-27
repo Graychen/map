@@ -9,9 +9,6 @@ const Home = () => (
     </Head>
 
     <main>
-      <h1>
-          打卡成功
-      </h1>
     </main>
 
 
@@ -25,7 +22,7 @@ const Home = () => (
         align-items: center;
         width: 100%;
         height: 100%;
-        background:url(http://o.cztvcloud.com/231/8594158/vr/static/img/detail-bg.d82fb0f6.png) no-repeat top
+        background:url(http://ww1.sinaimg.cn/large/6919c235ly1gqx3714hv8j21wk3q4tq8.jpg) no-repeat top
       }
 
       main {
