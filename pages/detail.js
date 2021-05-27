@@ -89,8 +89,8 @@ const Home = (props) => (
 
 Home.getInitialProps = async function (context) {
     const { id } = context.query
-    //const res = await fetch(`http://map-graychen.vercel.app/api/detail/${id}`)
-    const res = await fetch(`http://localhost:3000/api/detail/${id}`)
+    const res = await fetch(`http://map-graychen.vercel.app/api/detail/${id}`)
+    //const res = await fetch(`http://localhost:3000/api/detail/${id}`)
     const show = await res.json()
   
     console.log(`Fetched show: ${show.name}`)
