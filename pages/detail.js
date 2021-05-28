@@ -10,7 +10,7 @@ const Home = (props) => (
     </Head>
     <main>
       <Image
-        src="/images/1.jpg"
+        src="/images/banner.jpg"
         alt="Picture of the author"
         width={500}
         height={420}
