@@ -40,7 +40,6 @@ const Home = (props) => (
         align-items: center;
         width: 100%;
         height: 100%;
-        background:url(http://o.cztvcloud.com/231/8594158/vr/static/img/detail-bg.d82fb0f6.png) no-repeat top
       }
 
       main {
@@ -51,6 +50,7 @@ const Home = (props) => (
       }
 
       h1 {
+        font-size: 18px;
         display: block;
         font-size: 1.5em;
         margin-block-start: 0.83em;
@@ -61,9 +61,17 @@ const Home = (props) => (
       }
 
       h2 {
-        font-size: 1.2em;
         font-weight: bold;
         margin:0em;
+        color: #666;
+        white-space: nowrap;
+        font-family: Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;
+        font-size: 0.6rem;
+      }
+
+      p{
+        font-size:12px;
+        font-weight:bold;
       }
     `}</style>
 
